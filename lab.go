@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	defer controllers.DB.Close()
+	// defer controllers.DB.Close()
 	router := gin.Default()
 	router.Use(jwtAuth.JwtCors())
 	router.POST("/login", controllers.Login)

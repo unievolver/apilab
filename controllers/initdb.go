@@ -11,7 +11,7 @@ import (
 var DB, db *gorm.DB
 
 func init() {
-	initDB()
+	// initDB()
 }
 
 func initDB() {
@@ -20,8 +20,6 @@ func initDB() {
 		"mysql",
 		"root:key000000@tcp(192.168.3.3:3306)/evolver?charset=utf8mb4&parseTime=True&loc=Local",
 	)
-	//导出DB
-	DB = db
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -36,4 +34,6 @@ func initDB() {
 	user.Password = "admin"
 	user.Roles = roles
 	db.Create(&user)
+	//导出DB
+	DB = db
 }
