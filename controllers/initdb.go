@@ -5,9 +5,11 @@ import (
 	"log"
 
 	"github.com/jinzhu/gorm"
+	//连接数据库
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
+//DB 提供给main函数关闭数据库连接
 var DB, db *gorm.DB
 
 func init() {

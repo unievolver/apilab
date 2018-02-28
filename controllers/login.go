@@ -11,6 +11,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+//Login 提供给main函数登陆
 func Login(c *gin.Context) {
 	var user struct {
 		UserName string
