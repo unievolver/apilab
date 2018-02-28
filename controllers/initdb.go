@@ -10,6 +10,7 @@ import (
 )
 
 //DB 提供给main函数关闭数据库连接
+//
 var DB, db *gorm.DB
 
 func init() {
